@@ -1,5 +1,4 @@
 let guesses = 0;
-const password = "tesseract";
 function getCurrentTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
@@ -17,14 +16,25 @@ const guess = document.getElementById("guess")
 const output = document.getElementById("output")
 
 function checkguess(){
+    //const user_guess = guess.value.toLowerCase();
     guesses++;
 
-    if(guess.value === password){
-        unique_message = getUniqueMessage();
-        output.innerHTML = unique_message;
-        guess.disabled = true;
-    } else {
-        output.innerHTML = `Skill issue, Try again!`
-        
+    if(guess.value.includes("Tesseract")){
+        if(guess.value.includes("1003")){
+            if(guess.value.includes("Nxc4#")){
+                if(guess.value.includes("21")){
+                    unique_message = getUniqueMessage();
+                    output.innerHTML = unique_message;
+                    guess.disabled = true;
+                }
+            }
+        }
+    }
+    // if(guess.value === password){
+    //     unique_message = getUniqueMessage();
+    //     output.innerHTML = unique_message;
+    //     guess.disabled = true;
+    else {
+        output.innerHTML = 'Skill issue, Try again!'
     }
 }
