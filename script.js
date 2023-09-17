@@ -17,14 +17,14 @@ const guess = document.getElementById("guess")
 const output = document.getElementById("output")
 
 function checkguess(){
-    const user_guess = guess.value.toLowerCase();
     guesses++;
 
-    if(user_guess === password){
+    if(guess.value === password){
         unique_message = getUniqueMessage();
         output.innerHTML = unique_message;
         guess.disabled = true;
     } else {
-        output.innerHTML = 'Skill issue, Try again!'
+        output.innerHTML = `Skill issue, Try again!`
+        
     }
 }
