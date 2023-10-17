@@ -153,25 +153,25 @@ function checkguess(){
     guesses++;
     if(guess.value.toLowerCase().includes("tesseract")){
         if(guess.value.includes(elementSum(guess.value).toString())){
-            if(guess.value.includes("Nxc4#")){
-                if(guess.value.includes("🗿")){
+            if(guess.value.includes("🗿")){
+                if(guess.value.includes("Nxc4#")){
                     if(guess.value.includes((guess.value.length-1).toString())){
                         unique_message = getUniqueMessage();
                         output.innerHTML = unique_message;
                         guess.disabled = true;
                     } else {
-                        output.innerHTML = `Skill issue, Try again! ${elementSum(guess.value).toString()}`     
+                        output.innerHTML = `Skill issue, Try again! Count again!`     
                     }
                 } else {
-                    output.innerHTML = `Skill issue, Try again! ${elementSum(guess.value).toString()}`        
+                    output.innerHTML = `Skill issue, Try again! There is a better move!`        
                 }
             } else {
-                output.innerHTML = `Skill issue, Try again!  ${elementSum(guess.value).toString()}`        
+                output.innerHTML = `Skill issue, Try again! Did you already forget the emoji?`        
             }
         } else {
-            output.innerHTML = `Skill issue, Try again!  ${elementSum(guess.value).toString()}`        
+            output.innerHTML = `Skill issue, Try again! Error Code: ${elementSum(guess.value).toString()}`        
         }
     } else {
-        output.innerHTML = `Skill issue, Try again! ${elementSum(guess.value).toString()}`        
+        output.innerHTML = `Skill issue, Try again! How could you forget the four dimensional cube!`        
     }
 }
